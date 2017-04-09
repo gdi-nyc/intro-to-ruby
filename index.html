@@ -3,6 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
+	
 
 		<title>Intro to Ruby</title>
 
@@ -66,15 +67,13 @@
 					</div>
 				</section>
 				<section>
-					<h3>Introduce Yourself!</h3>
-					<div class="left-align">
-						<p>Tell us about yourself.</p>
-						<ul>
-							<li>Who are you?</li>
-							<li>What do you hope to get out of the class?</li>
-							<li>What's your favorite thing to do in NYC during the Spring?</li>
-						</ul>
-					</div>
+					<h2>INTRODUCE YOURSELF!</h2>
+					<p>Tell us about yourself.</p>
+					<ul>
+						<li>Who are you?</li>
+					<li>What do you hope to get out of the class?</li>
+						<li>What's your favorite thing to do in NYC during the Spring?</li>
+					</ul>
 				</section>
 				<section>
 					<h2>History of Ruby</h2>
@@ -134,7 +133,7 @@ for(int i = 0; i < 5; i++)
 			</section>
 			<section>
 				<h3>Working with Ruby</h3>
-				<p>We'll use <a href="http://repl.it">REPL.IT</a> to run Ruby code.</p>
+				<p>We'll use <a target="_blank" href="http://repl.it">REPL.IT</a> to run Ruby code.</p>
 
 			</section>
 			<section>
@@ -202,19 +201,17 @@ for(int i = 0; i < 5; i++)
 				<h2>Let's check it out!</h2>
 			</section>
 			<section>
-				<h2>DEMO!</h2>
+				<a href="https://repl.it/HBy9/1" target="_blank"><h2>DEMO!</h2></a>
 			</section>
 			<section>
 				<h2>Your turn!</h2>
-				<p>In Repl.It...</p>
+				<p>Goal:</p>
 				<ul>
-					<li>Use "puts" to return text</li>
 					<li>Do some math in Ruby</li>
-					<li>Set x = 1</li>
-					<li>Set y = 2</li>
-					<li>Sum x and y</li>
-					<li>Bonus points: set a variable to the sum of x and y!</li>
+					<li>Use "puts" to return text</li>
 				</ul>
+				<p>Go to <a target="_blank" href="https://repl.it/HBtw/2"> https://repl.it/HBtw/2 </a></p>
+				
 				<p>Duration: 5 minutes</p>
 			</section>
 			<section>
@@ -229,7 +226,7 @@ for(int i = 0; i < 5; i++)
 				gets.chomp
 				</code></pre>
 				<p>This grabs the info the user types in...</p>
-				<p class="fragment">Can save this to a variable to get it again</p>
+				<p class="fragment">Can save this to a variable to use the value again!</p>
 				<pre class="fragment"><code class="hljs" data-trim contenteditable>
 				response = gets.chomp
 				</code></pre>
@@ -239,7 +236,7 @@ for(int i = 0; i < 5; i++)
 				<ol>
 					<li class="fragment">We're going to get the user's name</li>
 					<li class="fragment">Get where they're from</li>
-					<li class="fragment">Get their favorite food</li>
+					<li class="fragment">Get their favorite animal</li>
 				</ol>
 			</section>
 			<section>
@@ -249,12 +246,28 @@ puts "What is your name?"
 name = gets.chomp
 puts "Where are you from?"
 location = gets.chomp
-puts "What is your favorite food?"
-food = gets.chomp
+puts "What is your favorite animal?"
+animal = gets.chomp
 puts "Got it, your name is " + name
 puts "You are from " + location
-puts "And your favorite food is " + food
+puts "And your favorite animal is " + animal
 				</code></pre>
+					</section>
+				<section>
+					<a href="https://repl.it/HBzO/0" target="_blank"><h2>DEMO!</h2></a>
+			</section>
+				<section>
+				<h2>Your turn!</h2>
+				<p>Goal:</p>
+				<ul>
+					<li>Add the q "What's your favorite color?"</li>
+					<li>Use 'puts' gets.chomp to get the response</li>
+					<li>Print out the response using 'puts'</li>
+				</ul>
+				<p>Go to <a target="_blank" href="https://repl.it/HBxT/0"> https://repl.it/HBxT/0 </a></p>
+				
+				<p>Duration: 5 minutes</p>
+			</section>
 			</section>
 			<section data-background="http://i.giphy.com/12Fhruq5MI3onC.gif">
 				<h2 class="highlighted-bg">Let Ruby do the heavy lifting</h2>
@@ -268,10 +281,11 @@ puts "And your favorite food is " + food
 					<li>reverse</li>
 					<li>length</li>
 				</ul>
-				<p>These are all built-in with Ruby!</p>
+				<p>These are all built-in with Ruby! </p>
+				<p>'gets' and 'chomp' are also built-in methods as well!</p>
 			</section>
 			<section>
-				<h2>Demo</h2>
+				<a href="https://repl.it/HBz4/2" target="_blank"><h2>Demo</h2></a>
 			</section>
 			<section>
 				<h2>Can also write your own methods!</h2>
@@ -290,25 +304,82 @@ end
 				</code></pre>
 			</section>
 			<section>
+				<h2>Methods can return values!</h2>
+				<p>Whatever value is on the last line of the method is the return value</p>
+				<p></p>
+				<pre><code class="hljs" data-trim contenteditable>
+def get_date()
+	Date.today
+end
+				</code></pre>
+				
+				<pre><code class="hljs" data-trim contenteditable>
+def add_and_times(initial, add, times)
+	added_value = initial + add
+	added_value * times
+end
+
+result = add_and_times(0,1,5)
+puts result
+				</code></pre>
+			</section>
+			<section>
+				<h2>Your turn!</h2>
+				<p>Goal:</p>
+				<ul>
+					<li>Write a method to return the square of any number you pass in</li>
+					<li>use 'puts' to print out the number </li>
+				</ul>
+				<p>Go to <a target="_blank" href="https://repl.it/HBxb/7"> https://repl.it/HBxb/7 </a></p>
+				
+				<p>Duration: 5 minutes</p>
+			</section>
+			<section>
 				<h2>This is pretty boring... let's do more!</h2>
 			</section>
 			<section data-background="http://i.giphy.com/mcCZ92VroE8Io.gif">
-				<h2 class="highlighted-bg">Looping</h2>
+				<h2 class="highlighted-bg">Flow Control</h2>
 			</section>
 			<section>
-				<h2>Looping</h2>
+				<h2>Flow Control</h2>
+				<h3> Looping </h3>
+				<p> Used when you want to do something multiple times </p>
 				<pre><code class="hljs" data-trim contenteditable>
-10.times do
-  puts "HELLO " + name
+
+for i in 0..9 do
+    puts "#{i}"
+end 
+
+while i < 9 do
+	puts i
+	i+=1
 end
 				</code></pre>
+				
 			</section>
+				<section>
+					<h3>'If' Statement</h3>
+				<p> Do something if the test evaluates to true" </p>
+				<p> "==" means compare! </p>
+				<pre><code class="hljs" data-trim contenteditable>
+if animal == "dog"
+	puts "bark"
+elsif animal == "cat"
+	puts "meow"
+elsif animal == "snake"
+	puts "hiss"
+else 
+	puts "meep! I don't know what animal type this is :("
+end
+				</code></pre>
+				</section>
 			<section data-background="https://media.giphy.com/media/zDrQxFFgiiGoU/giphy.gif">
 				<h2 class="highlighted-bg">Beware of infinite loops!</h2>
 			</section>
 			<section>
-				<h2>DEMO!</h2>
+				<a target="_blank" href="https://repl.it/HBxf/5"><h2>DEMO!</h2></a>
 			</section>
+	
 			<!-- INTERMISSION -->
 			<section data-background="http://i.giphy.com/I5UzIr17kwrqE.gif">
 			</section>
@@ -331,7 +402,7 @@ end
 			<section>
 				<h2>Arrays</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array = [1, "two", "3", "A"]
+array_of_stuff = [1, "two", "3", "A"]
 				</code></pre>
 				<ul>
 					<li class="fragment">Can call out the whole thing</li>
@@ -340,21 +411,25 @@ my_fancy_array = [1, "two", "3", "A"]
 			</section>
 			<section>
 				<h2>Creating a new array</h2>
+				<p>Can be filled with stuff on initialization!</p>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array = []
+pet_types = ["cat", "dog", "snake"]
 				</code></pre>
-				<p>But it's empty!</p>
+				<p>Can be empty on initialization</p>
+				<pre><code class="hljs" data-trim contenteditable>
+pet_types = []
+				</code></pre>
 			</section>
 			<section>
 				<h2>Putting stuff in an array</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array << "stuff"
+pet_types << "bird"
 				</code></pre>
 			</section>
 			<section>
 				<h2>Putting stuff in an array (method #2!)</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array.push("stuff")
+pet_types.push("bird")
 				</code></pre>
 			</section>
 			<section data-background="http://i.giphy.com/zbALuq5hKcyk0.gif">
@@ -363,14 +438,14 @@ my_fancy_array.push("stuff")
 			<section>
 				<h2>Arrays</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array = [1, "two", "3", "A"]
+pet_types = ["cat", "dog", "snake"]
 				</code></pre>
 				<p>There are different ways to take stuff out</p>
 			</section>
 			<section>
 				<h2>.POP!</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array.pop
+pet_types.pop
 				</code></pre>
 				<p>This removes the last thing in the array</p>
 				<p>It also "returns" that value</p>
@@ -381,19 +456,31 @@ my_fancy_array.pop
 			<section>
 				<h2>Getting something specific</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array[0]
+pet_types[0]
 				</code></pre>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array[1]
+pet_types[1]
 				</code></pre>
 				<pre><code class="hljs" data-trim contenteditable>
-my_fancy_array[2]
+pet_types[2]
 				</code></pre>
 				<p>You can get the value you want depending on where it is in the array</p>
+				<p>Position is its "index"</p>
 				<p class="fragment">BEWARE! Arrays start at "0"</p>
 			</section>
 			<section>
-				<h2>Demo!</h2>
+				<a href="https://repl.it/HByD/5" target="_blank"><h2>Demo!</h2></a>
+			</section>
+			<section>
+				<h2>Your turn!</h2>
+				<p>Goal:</p>
+				<ul>
+					<li>Create an array for the days of the week</li>
+					<li>Get "Tuesday" from the array (hint: what index is it at?)</li>
+				</ul>
+				<p>Go to <a target="_blank" href="https://repl.it/HBtl/1"> https://repl.it/HBtl/1 </a></p>
+				
+				<p>Duration: 5 minutes</p>
 			</section>
 			<section data-background="http://3.bp.blogspot.com/-LhNc8SiN-uw/Uqj9mwORBeI/AAAAAAAAK74/lHYJCT8kRY4/s1600/browning+2.gif">
 				<h2 class="highlighted-bg">Hashes</h2>
@@ -405,43 +492,53 @@ my_fancy_array[2]
 			<section data-background="http://i.giphy.com/KknqVCr1J5kTm.gif">
 				<h2 class="highlighted-bg">Huh?</h2>
 			</section>
-			<section>
-				<h2>Hashes</h2>
-				<p>Keys and Values go together. It helps you "link" data.</p>
-				<p>Think of it like an index, almost.</p>
-			</section>
-			<section>
+				<section>
 				<h2>Hashes</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-menu = {:drink => "cola", :food => burger}
+pet = { type: "snake", price: 10 }
+
+vs
+
+pet_type = "snake"
+pet_price = 10
 				</code></pre>
 				<p>This helps keep info organized.</p>
-				<p>Everytime you want to look up what drink you have, "cola" will be returned</p>
 				<p class="fragment">What are other things we could store in hashes?</p>
+				<pre><code class="fragment" class="hljs" data-trim contenteditable>
+pet = { type: "snake", prices: [10, 15, 20] }
+				</code></pre>
 			</section>
 			<section>
-				<h2>Let's use Hashes and Arrays to build a menu together</h2>
+				<h2>Let's use Hashes and Arrays to build a petstore inventory together</h2>
 			</section>
 			<section>
 				<h2>Hashes and Arrays</h2>
 				<pre><code class="hljs" data-trim contenteditable>
-menu = {
-	:drinks => ["OJ", "Coke", "Coffee"],
-	:food => ["Burger", "Pizza", "PB&J"]
-}
+ pet_types = [ 
+      {
+        name: "snakes",
+        price: 10
+      },
+      {
+        name: "cats",
+        price: 20
+      },
+      {
+        name: "dogs",
+        price: 20
+      }
+    ]
 				</code></pre>
 			</section>
 			<section>
 				<h2>Hashes and Arrays</h2>
 				<p>Getting info out</p>
 				<pre><code class="hljs" data-trim contenteditable>
-menu[:drinks]
-menu[:food]
-				</code></pre>
-				<p>Returns all drinks and food. To just get one, you have to use the item's position in the array:</p>
-				<pre><code>
-menu[:drinks][0]
-menu[:food][2]
+pet_types[0][:name]
+pet_types[0][:price]	
+pet_types[1][:name]
+pet_types[1][:price]
+# etc....
 				</code></pre>
 				<p class="fragment">So tedious!</p>
 			</section>
@@ -452,11 +549,36 @@ menu[:food][2]
 				<h2>.each do</h2>
 				<p>You can use .each do to loop through items in an array!</p>
 				<pre><code>
-menu[:drinks].each do |drink|
-	puts drink
+pet_types.each do |pet_type|
+	puts pet_type[:name]
+	puts pet_type[:price]
 end
 			</code></pre>
-			<p>This outputs all of the drinks at once!</p>
+			<p>This outputs all of the types and their attributes at once!</p>
+			</section>
+			<section>
+				<h2>Can also use For loops!</h2>
+			
+				<pre><code>
+for type in pet_types
+	puts type[:name]
+	puts type[:price]
+end
+			</code></pre>
+			</section>
+			<section>
+				<a href="https://repl.it/HBys/3" target="_blank"><h2>Demo!</h2></a>
+			</section>
+			<section>
+				<h2>Your turn!</h2>
+				<p>Goal:</p>
+				<ul>
+					<li>Loop through the pet_types array and print out the price with "$" in front of it </li>
+					<li>Hint: .to_s might be needed: https://apidock.com/ruby/Fixnum/to_s </li>
+				</ul>
+				<p>Go to <a target="_blank" href="https://repl.it/HByP/1"> https://repl.it/HByP/1 </a></p>
+				
+				<p>Duration: 5 minutes</p>
 			</section>
 			<section data-background="http://i.giphy.com/oubM1tKqnLW5G.gif">
 				<h2 class="highlighted-bg">Overwhelmed?<br> It's ok! We're almost there!</h2>
@@ -478,31 +600,27 @@ end
 				<ul>
 					<small>
 						<li class="fragment">a Name</li>
-						<li class="fragment">a Breed</li>
 						<li class="fragment">it Meows</li>
 					</small>
 				</ul>
 			</section>
 			<section>
-				<h2>DEMO!</h2>
+				<a href="https://repl.it/HBzX/2" target="_blank"><h2>DEMO!</h2></a>
 			</section>
 			<section>
 				<h2>Sample class</h2>
 				<pre><code>
 class Cat
 
-	attr :name, :breed, :age
+	attr :name 
 
-	def initialize(name, breed, age)
+	def initialize(name)
 		@name = name
-		@breed = breed
-		@age = age
 	end
 
-	def meows
+	def talks
 		puts "*meowwwww*"
 	end
-
 end
 			</code></pre>
 			</section>
@@ -510,45 +628,106 @@ end
 				<h2>Class inheritance</h2>
 				<img src="images/cat-kitty.jpg" alt="cat and kitty">
 				<small>
-					<p class="fragment">What if you wanted to create a class "Kitty", but you knew it would be pretty similar to "Cat"?</p>
+					<p class="fragment">What if you wanted to create a class "Dog", but you knew it would be pretty similar to "Cat"?</p>
 					<p class="fragment">Is there a way to "copy" a class?</p>
 					<p class="fragment">Why, yes! (Sort of.) You can use sub-classes.</p>
 				</small>
 			</section>
 			<section>
-				<h2>Sub-classes</h2>
+				<h3>Sub-classes</h3>
 				<pre><code>
-class Cat
+class Pet
+	attr :name 
 
-#some stuff
-
+	def initialize(name)
+		@name = name
+	end
+	
+	def talks(noise)
+		puts noise
+	end
 end
 
-class Kitty < Cat
-#some more stuff
+class Cat < Pet
+	def initialize(name)
+		@name = name
+	end
+	
+	def talks
+		super("meowwww")
+	end
 end
 			</code></pre>
-			<p class="fragment"><small>You can use the < to symbolize Kitty is a sub-class from Cat.</small></p>
-			<p class="fragment"><small>The stuff available for Cat is available for Kitty.</small></p>
-			<p class="fragment"><small>The stuff available for Kitty is NOT available for Cat.</small></p>
+			</section>
+		<section>
+		<pre><code>
+		class Dog < Pet
+			def initialize(name)
+				@name = name
+			end
+			
+			def talks
+				super("wooofff")
+			end
+		end
+			</code></pre>
+		</section>
+			<section>
+				<p>You can use the < to symbolize Cat and Dog is a sub-class from Pet.</p>
+				<p class="fragment">The stuff available for Pet is available for Cat.</p>
+				<p class="fragment">The stuff available for Cat is NOT available for Pet.</p>
 			</section>
 			<section>
 				<h2>Inheritance travels down, not up.</h2>
 			</section>
+	
+			<section>
+			<a href="https://repl.it/HBzD/4" target="_blank"><h2>DEMO!</h2></a>
+			</section>
 			<section>
 				<h2>Your turn!</h2>
+				<p>Goal:</p>
 				<ul>
-					<li>Write a Class</li>
-					<li>Initialize it</li>
-					<li>Write a simple method for it (like meows)</li>
-					<li>Write a sub Class that inherits from your first Class</li>
+					<li>Write a Class for Snake that inhereits from Pet</li>
+					<li>Implement talk for Snake</li>
+					<li>Add more methods to Pet (ex: sleep, eat) and Snake (ex: shed_skin)</li>
 					<li>Keep it simple! :)</li>
 				</ul>
+				
+				<p>Go to <a target="_blank" href="https://repl.it/HBy3/1"> https://repl.it/HBy3/1 </a></p>
+				
+				<p>Duration: 10 minutes</p>
 			</section>
 			<section>
-				<h2>That's all folks!</h2>
+				<h2>Time to build our pet shop!</h2>
+				<p> Everyone go to <a target="_blank" href="https://repl.it/HBwN/7">https://repl.it/HBwN/7 </a></p>
+				<p> Does stuff look familiar??? </p>
+				<ul>
+					<li class="fragment"> main.rb: Program for user to interface with. Tons of gets.chomp and a 'if' statement! </li>
+					<li class="fragment"> pet.rb: Parent class. Has a loop in the 'play' method! Only new thing is 'sleep'. </li>
+					<li class="fragment"> pet_types.rb: Subclasses. Nothing new here! </li>
+					<li class="fragment"> pet_shop.rb: Has our awesome array of hashes! Has a loop and a if statement </li>
+				</ul>
+				
 			</section>
-
+<section  data-background="https://media.giphy.com/media/nwyqBwP65XCAU/giphy.gif">
+	<p  class="highlighted-bg">
+		You got this!!
+		
+		</p>
+				</section>
+			<section>
+				<h2> Goal: </h2>
+					<ul>
+						<li> Go to pet_types.rb and finish the Dog subclass by implementing the initializer and the 'talk' method</li>
+						<li> Go to pet.rb and finish the 'sleep' method. Implement it in a way that will
+						pause the method for 5 seconds while the animal is sleeping. Take a look at the 'play' method for a hint. Use 'puts' at the end to let the user know when the pet has woken up! 
+						<li> Go to main.rb file and ad a condition for action == "sleep" in the 'if' statement and call your new sleep function when the user passes in "sleep"
+						
+					</ul>
+					
+				</ul>
+			</section>
 			<section data-background="http://i.giphy.com/fjgqYjVkzfQ9a.gif">
 				<div class="highlighted-bg">
 					<h2>Thank you!</h2>
